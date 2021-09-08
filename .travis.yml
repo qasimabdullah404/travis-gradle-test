@@ -12,6 +12,10 @@ android:
   - extra-android-m2repository
 jdk:
   - oraclejdk8
+env:
+  global:
+    - android.useAndroidX=true
+    - android.enableJetifier=true
 before_install:
   - yes | sdkmanager "platforms;android-29"
   #- mv ./gradle.properties ~/.gradle/gradle.properties
