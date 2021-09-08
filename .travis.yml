@@ -1,0 +1,17 @@
+language: android
+os: linux
+dist: trusty
+sudo: true
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-29.0.3
+  - android-29
+  - extra
+jdk:
+  - oraclejdk8
+before_install:
+  - yes | sdkmanager "platforms;android-29"
+script:
+  - cat ~/.gradle/gradle.properties
