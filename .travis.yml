@@ -13,5 +13,6 @@ jdk:
   - oraclejdk8
 before_install:
   - yes | sdkmanager "platforms;android-29"
+  - cat ~/.gradle/gradle.properties
 script:
   - cat ~/.gradle/gradle.properties
