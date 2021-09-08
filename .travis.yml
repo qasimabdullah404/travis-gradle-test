@@ -9,10 +9,11 @@ android:
   - build-tools-29.0.3
   - android-29
   - extra
+  - extra-android-m2repository
 jdk:
   - oraclejdk8
 before_install:
   - yes | sdkmanager "platforms;android-29"
-  - mv ./gradle.properties ~/.gradle/gradle.properties
+  #- mv ./gradle.properties ~/.gradle/gradle.properties
 script:
   - cat ~/.gradle/gradle.properties
